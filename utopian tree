@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int t,j;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int n,i,res=0;
+        scanf("%d",&n);
+        for(i=0;i<=n;i++)
+        {
+            if((i-1)%2==0)
+            {
+                res *= 2;
+            }
+            else
+            {
+                res += 1;
+            }
+        }
+        printf("%d\n",res);
+    }
+    return 0;
+}
