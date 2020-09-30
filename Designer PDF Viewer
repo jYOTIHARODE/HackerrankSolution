@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int Hash[26];
+    for(int i = 0; i < 26; ++i)
+       cin >> Hash[i];
+
+    string word;
+    cin >> word;
+    
+    int big_hash = 0;
+    for(char i : word)
+        if(Hash[(int)i-97] > big_hash) big_hash = Hash[(int)i-97];
+    
+    cout << big_hash * word.size() << endl;
+    
+    return 0;
+}
