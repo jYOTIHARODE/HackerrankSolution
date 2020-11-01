@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main() 
+{
+    char str[1000]; 
+    char map[10];
+    scanf("%str", &str);
+    int len = strlen(str);
+    
+    for (int i = 0; i < 10; i++) 
+            map[i] = 0;
+    
+    for (int i = 0; i < len; i++) 
+    {
+        int x = str[i] - '0';
+        if (x >= 0 && x <= 9) 
+            map[x]++;
+    }
+    
+    for (int i = 0; i < 10; i++) 
+        printf("%d ", map[i]);
+        
+    return 0;
+}
