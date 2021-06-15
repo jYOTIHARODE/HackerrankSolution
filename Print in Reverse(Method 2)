@@ -1,0 +1,17 @@
+void print(stack<int>s)
+{
+    while(!s.empty())
+    {
+        cout<<s.top()<<endl;
+        s.pop();
+    }
+}
+void reversePrint(SinglyLinkedListNode* llist) {
+    stack<int>s;
+    while(llist)
+    {
+        s.push(llist->data);
+        llist = llist->next;
+    }
+    print(s);
+}
