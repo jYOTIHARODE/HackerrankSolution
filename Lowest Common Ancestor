@@ -1,0 +1,8 @@
+Node *lca(Node *root, int v1,int v2) {
+		if(!root)   return nullptr;
+        if(root->data==v1 or root->data==v2)    return root;
+        Node* left_lca = lca(root->left,v1,v2);
+        Node* right_lca = lca(root->right,v1,v2);
+        if(left_lca and right_lca)  return root;
+        return (left_lca!=nullptr)?left_lca:right_lca;
+    }
