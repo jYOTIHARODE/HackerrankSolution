@@ -1,5 +1,24 @@
+1st Method:-
+
 int height(Node* root) {
         if(!root) return -1;
         
         return max(height(root->left), height(root->right)) + 1;
     }
+
+2nd Method:-
+
+int height(Node* root) {
+     int ans;
+     if(root==nullptr)  return 0;
+     if(!root->left and !root->right)
+        return 0;
+     int lt = height(root->left);
+     int rt = height(root->right);
+     if(lt>rt)
+        ans = lt+1;
+     else
+        ans = rt+1;
+    return ans;
+    }
+
